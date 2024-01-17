@@ -1,5 +1,5 @@
 import Container from "./ui/container"
-import { Routes, Route } from "react-router-dom"
+import { ModeToggle } from "./mode-toggle"
 
 const header = () => {
     return (
@@ -10,10 +10,24 @@ const header = () => {
                     <div className="flex items-center">
                         LOGO
                     </div>
+                    <div className="flex items-center">
+                        <div className="flex p-4">
+                            About Us
+                        </div>
+                        <div className="flex p-4">
+                            Services
+                        </div>
+                        <div className="flex p-4">
+                            Contact Us
+                        </div>
+                    </div>
+                    <div className="flex items-center">
+                        <ModeToggle/>
+                    </div>
                 </div>
             </Container>
         </header>
     )
 }
 
-export default header 
+export default header

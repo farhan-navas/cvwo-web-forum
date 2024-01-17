@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import Header from "./components/Header"
+import '../App.css'
+import Header from "../components/Header"
+import { ThemeProvider } from '@/components/theme-provider'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <ThemeProvider>
       <div>
         <Header/>
       </div>
@@ -32,7 +33,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </ThemeProvider>
   )
 }
 
