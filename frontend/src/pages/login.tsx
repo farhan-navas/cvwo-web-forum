@@ -1,7 +1,7 @@
 import viteLogo from '/vite.svg'
 import { Link } from "react-router-dom"
 import { useState } from 'react'
-import { ThemeProvider } from '@/components/theme-provider'
+import Header from '@/components/Header'
 
 export default function Login() {
     const defaultFormData = {
@@ -24,12 +24,14 @@ export default function Login() {
 
     return (
         <div>
+            <Header />
+
             <div className='flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8'>
                 <div className='sm:mx-auto sm:w-full sm:max-w-md'>
                     <Link to="/">
                         <img className='mx-auto h-12 w-auto' src={viteLogo} alt="logo" />
                     </Link>
-                    <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
+                    <h2 className='mt-6 text-center text-3xl font-extrabold'>
                         Login to your account
                     </h2>
                 </div>
@@ -50,7 +52,7 @@ export default function Login() {
                                     autoComplete='email' 
                                     onChange={handleChange}
                                     required
-                                    className='block-w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+                                    className='flex w-full appearance-none rounded-md border border-gray-300 px-4 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
                                 />
                             </div>
                         </div>
@@ -67,7 +69,7 @@ export default function Login() {
                                     autoComplete='current-password' 
                                     onChange={handleChange}
                                     required
-                                    className='block-w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+                                    className='flex w-full appearance-none rounded-md border border-gray-300 px-4 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
                                 />
                             </div>
                         </div>
@@ -75,7 +77,7 @@ export default function Login() {
                         <div>
                             <button 
                                 type='submit'
-                                className='flex w-full justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-blue-800 focus:ring-offset-2'
+                                className='block-w-full justify-center rounded-md border border-transparent bg-blue-600 px-10 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-blue-800 focus:ring-offset-2'
                             >
                                 Login
                             </button>
